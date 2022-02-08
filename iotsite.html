@@ -1,0 +1,705 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>IoTSite</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/iotsite/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/iotsite/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+	  <script>
+      var timer=null;
+      function displayClock(num){//num是传入的startClock中的动态值
+        if(num<10){return "0"+num;}
+        else{return num;}
+      }
+      //停止计时
+      function stopClock(){clearTimeout(timer);}
+      //开始计时
+      function startClock(){
+        var time =new Date();
+        var year=displayClock(time.getFullYear())+"/";
+        var month=displayClock(time.getMonth())+"/";
+        var date=displayClock(time.getDate())+"        ";
+        var hours=displayClock(time.getHours())+":";
+        var minutes=displayClock(time.getMinutes())+":";
+        var seconds=displayClock(time.getSeconds());
+        //显示日期
+        //显示时间
+        var sb = whenNow();
+        show.innerHTML=sb+"! &nbsp&nbsp 现在是"+year+month+date+hours+minutes+seconds;//在id为show的块区域显示
+        timer=setTimeout("startClock()",1000);//延时器
+      }
+      function whenNow(){
+          var time = new Date();
+          var hours = displayClock(time.getHours());
+          if(hours<12){return "GoodMorning"}
+          else{
+            if(hours<7){return "GoodAfternoon"}
+            else{return "GoodEvening"}}
+          }
+    </script>
+    <style>
+      #show{
+        font-size: 30px;
+        color:#027DB4;
+        text-align:center;
+      }
+      </style>
+  </head>
+  <body onload="startClock()" onunload="stopClock()">
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u111" class="ax_default box_1">
+        <div id="u111_div" class=""></div>
+        <div id="u111_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u112" class="ax_default" data-left="28" data-top="227" data-width="50" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u113" class="ax_default flow_shape">
+          <div id="u113_div" class=""></div>
+          <div id="u113_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u114" class="ax_default box_1">
+        <div id="u114_div" class=""></div>
+        <div id="u114_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u115" class="ax_default box_1">
+        <div id="u115_div" class=""></div>
+        <div id="u115_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u116" class="ax_default icon">
+        <img id="u116_img" class="img " src="images/index/u3.svg"/>
+        <div id="u116_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u117" class="ax_default icon">
+        <img id="u117_img" class="img " src="images/index/u4.svg"/>
+        <div id="u117_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u118" class="ax_default label">
+        <div id="u118_div" class=""></div>
+        <div id="u118_text" class="text ">
+          <p><span style="text-decoration:none;">回到旧版</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u119" class="ax_default">
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u120" class="ax_default" data-left="386" data-top="66" data-width="754" data-height="46">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u121" class="ax_default box_1">
+          <div id="u121_div" class=""></div>
+          <div id="u121_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框) -->
+        <div id="u122" class="ax_default text_field">
+          <div id="u122_div" class=""></div>
+          <input id="u122_input" type="text" value="" class="u122_input"/>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u123" class="ax_default icon">
+          <img id="u123_img" class="img " src="images/index/u10.svg"/>
+          <div id="u123_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u124" class="ax_default label">
+        <div id="u124_div" class=""></div>
+        <div id="u124_text" class="text ">
+          <p><span style="text-decoration:none;">物联网技能工作平台</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) 
+      <div id="u125" class="ax_default label">
+        <div id="u125_div" class=""></div>
+        <div id="u125_text" class="text ">
+          <p><span style="text-decoration:none;">任欢nmsl</span></p>
+        </div>
+      </div> -->
+
+      <!-- Unnamed (组 合) -->
+      <div id="u126" class="ax_default" data-left="28" data-top="277" data-width="50" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u127" class="ax_default flow_shape">
+          <div id="u127_div" class=""></div>
+          <div id="u127_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u128" class="ax_default icon">
+          <img id="u128_img" class="img " src="images/index/u35.svg"/>
+          <div id="u128_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u129" class="ax_default" data-left="28" data-top="177" data-width="50" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u130" class="ax_default flow_shape">
+          <div id="u130_div" class=""></div>
+          <div id="u130_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u131" class="ax_default icon">
+          <img id="u131_img" class="img " src="images/index/u38.svg"/>
+          <div id="u131_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u132" class="ax_default" data-left="28" data-top="127" data-width="50" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u133" class="ax_default flow_shape">
+          <div id="u133_div" class=""></div>
+          <div id="u133_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u134" class="ax_default icon">
+          <img id="u134_img" class="img " src="images/index/u41.svg"/>
+          <div id="u134_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u135" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u136" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u137" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u138" class="ax_default box_1">
+        <div id="u138_div" class=""></div>
+        <div id="u138_text" class="text ">
+          <p><span style="text-decoration:none;">沪公网安备:&nbsp;&nbsp; 310110000号&nbsp;&nbsp; |&nbsp;&nbsp; 沪ICP备:&nbsp; B2-20100004-1号&nbsp; |&nbsp; </span></p><p><span style="text-decoration:none;">沪ICP备:B2-20100004号 Copyright ©&nbsp; 2002-2021&nbsp; Oray. All Rights Reserved.</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u139" class="ax_default _图片">
+        <img id="u139_img" class="img " src="images/index/u27.png"/>
+        <div id="u139_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线) -->
+      <div id="u140" class="ax_default line">
+        <img id="u140_img" class="img " src="images/index/u28.svg"/>
+        <div id="u140_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u141" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u142" class="ax_default">
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u143" class="ax_default icon">
+        <img id="u143_img" class="img " src="images/index/u45.svg"/>
+        <div id="u143_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u144" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u145" class="ax_default box_1">
+        <div id="u145_div" class=""></div>
+        <div id="u145_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u146" class="ax_default box_1">
+        <div id="u146_div" class=""></div>
+        <div id="u146_text" class="text ">
+          <p><span style="text-decoration:none;">正在开发中</span></p><p><span style="text-decoration:none;">...</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u147" class="ax_default box_1">
+        <div id="u147_div" class=""></div>
+        <div id="u147_text" class="text ">
+          <p><span style="text-decoration:none;">今天</span></p><p><span style="text-decoration:none;">吃什么</span></p><p><span style="text-decoration:none;">?</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u148" class="ax_default box_1">
+        <div id="u148_div" class=""></div>
+        <div id="u148_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u149" class="ax_default box_1">
+        <div id="u149_div" class=""></div>
+        <div id="u149_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u150" class="ax_default box_1">
+        <div id="u150_div" class=""></div>
+        <div id="u150_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u151" class="ax_default box_1">
+        <div id="u151_div" class=""></div>
+        <div id="u151_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u152" class="ax_default box_1">
+        <div id="u152_div" class=""></div>
+        <div id="u152_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u153" class="ax_default box_1">
+        <div id="u153_div" class=""></div>
+        <div id="u153_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u154" class="ax_default box_1">
+        <div id="u154_div" class=""></div>
+        <div id="u154_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u155" class="ax_default _图片">
+        <img id="u155_img" class="img " src="images/iotsite/u155.gif"/>
+        <div id="u155_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u156" class="ax_default _图片">
+        <img id="u156_img" class="img " src="images/iotsite/u156.svg"/>
+        <div id="u156_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u157" class="ax_default _图片">
+        <img id="u157_img" class="img " src="images/iotsite/u157.svg"/>
+        <div id="u157_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u158" class="ax_default _图片">
+        <img id="u158_img" class="img " src="images/iotsite/u158.png"/>
+        <div id="u158_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u159" class="ax_default" data-left="768" data-top="170" data-width="100" data-height="100">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u160" class="ax_default box_1">
+          <div id="u160_div" class=""></div>
+          <div id="u160_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u161" class="ax_default _图片">
+          <img id="u161_img" class="img " src="images/iotsite/u161.png"/>
+          <div id="u161_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u162" class="ax_default _图片">
+        <img id="u162_img" class="img " src="images/iotsite/u162.svg"/>
+        <div id="u162_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u163" class="ax_default" data-left="892" data-top="294" data-width="224" data-height="100">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u164" class="ax_default box_1">
+          <div id="u164_div" class=""></div>
+          <div id="u164_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u165" class="ax_default _图片">
+          <img id="u165_img" class="img " src="images/iotsite/u165.png"/>
+          <div id="u165_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u166" class="ax_default _图片">
+        <img id="u166_img" class="img " src="images/iotsite/u166.png"/>
+        <div id="u166_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u167" class="ax_default _图片">
+        <img id="u167_img" class="img " src="images/iotsite/u167.png"/>
+        <div id="u167_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u168" class="ax_default _图片">
+        <img id="u168_img" class="img " src="images/iotsite/u168.svg"/>
+        <div id="u168_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u169" class="ax_default" data-left="396" data-top="418" data-width="224" data-height="224">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u170" class="ax_default box_1">
+          <div id="u170_div" class=""></div>
+          <div id="u170_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u171" class="ax_default box_1">
+          <div id="u171_div" class=""></div>
+          <div id="u171_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u172" class="ax_default _图片">
+          <img id="u172_img" class="img " src="images/index/u19.png"/>
+          <div id="u172_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u173" class="ax_default _图片">
+          <img id="u173_img" class="img " src="images/index/u20.png"/>
+          <div id="u173_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u174" class="ax_default _图片">
+          <img id="u174_img" class="img " src="images/index/u21.png"/>
+          <div id="u174_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u175" class="ax_default _图片">
+        <img id="u175_img" class="img " src="images/iotsite/u175.svg"/>
+        <div id="u175_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u176" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u177" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u178" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u179" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u180" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u181" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u182" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u183" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u184" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u185" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u186" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u187" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u188" class="ax_default label">
+        <div id="u188_div" class=""></div>
+        <div id="u188_text" class="text ">
+          <p><span style="text-decoration:none;">网易云音乐</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u189" class="ax_default label">
+        <div id="u189_div" class=""></div>
+        <div id="u189_text" class="text ">
+          <p><span style="text-decoration:none;">Github</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u190" class="ax_default label">
+        <div id="u190_div" class=""></div>
+        <div id="u190_text" class="text ">
+          <p><span style="text-decoration:none;">菜鸟教程</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u191" class="ax_default label">
+        <div id="u191_div" class=""></div>
+        <div id="u191_text" class="text ">
+          <p><span style="text-decoration:none;">微软文档</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u192" class="ax_default label">
+        <div id="u192_div" class=""></div>
+        <div id="u192_text" class="text ">
+          <p><span style="text-decoration:none;">知乎</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u193" class="ax_default label">
+        <div id="u193_div" class=""></div>
+        <div id="u193_text" class="text ">
+          <p><span style="text-decoration:none;">百度翻译</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u194" class="ax_default label">
+        <div id="u194_div" class=""></div>
+        <div id="u194_text" class="text ">
+          <p><span style="text-decoration:none;">bilibili</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u195" class="ax_default label">
+        <div id="u195_div" class=""></div>
+        <div id="u195_text" class="text ">
+          <p><span style="text-decoration:none;">台湾学术论文期刊数据库</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u196" class="ax_default label">
+        <div id="u196_div" class=""></div>
+        <div id="u196_text" class="text ">
+          <p><span style="text-decoration:none;">AIOT平台</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u197" class="ax_default label">
+        <div id="u197_div" class=""></div>
+        <div id="u197_text" class="text ">
+          <p><span style="text-decoration:none;">物联网云平台</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u198" class="ax_default label">
+        <div id="u198_div" class=""></div>
+        <div id="u198_text" class="text ">
+          <p><span style="text-decoration:none;">CSDN</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u199" class="ax_default label">
+        <div id="u199_div" class=""></div>
+        <div id="u199_text" class="text ">
+          <p><span style="text-decoration:none;">施普林格</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u200" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u201" class="ax_default label">
+        <div id="u201_div" class=""></div>
+        <div id="u201_text" class="text ">
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
